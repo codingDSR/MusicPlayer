@@ -1,0 +1,36 @@
+<ion-view view-title="{{song[0].name}}">
+  <div class="content has-header">
+	<div ng-repeat="song in song">
+		<div class="player">
+		  <div class="top" style="background:linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.65)),url('{{song.imgname}}') center no-repeat">
+		    <div class="bannerinfo">
+		      <div class="info">
+		        <h2>{{song.name}}</h2>
+		        <p>Unknown</p>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="bottom">
+		    <div class="range">
+		      <div class="range-control">
+		      	<div class="processbar" style="width:{{songPlayPercent}}%"></div>
+		      </div>
+		      <div class="time-current">{{currentDuration}}</div>
+		      <div class="time-total">{{totalDuration}}</div>
+		    </div>
+		    <div class="controls">
+		      <div class="fa fa-backward" ng-click="prevSongQueue()"></div>
+		      <div ng-class="{'fa':true,'fa-pause':!songElement.paused,'fa-play':songElement.paused}" ng-click="playpause()"></div>
+		      <div class="fa fa-forward" ng-click="nextSongQueue()"></div>
+		    </div>
+		    <div class="special">
+		      <div class="fa fa-random selected"></div>
+		      <div class="fa fa-repeat"></div>
+		      <div class="fa fa-heart selected"></div>
+		      <div class="fa fa-ellipsis-h"></div>
+		    </div>
+		  </div>
+		</div>
+	</div>
+  </div>
+</ion-view>

@@ -1,0 +1,61 @@
+<ion-view view-title="Artists">
+  <ion-content class="mtop">
+  	<div class="index-containers trending-container">
+  		<div class="container-header">
+  			Trending
+  		</div>
+		<div class="trending-scroll-container swiper-container">
+			<div class="swiper-wrapper">
+			  <div class="swiper-slide" ng-repeat="song in trendingSongs" ng-click="playSong('{{song.id}}')">
+			  	<img src="{{song.imgname}}">
+			  	<p>{{song.name}}</p>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<div class="index-containers new-release-container">
+  		<div class="container-header">
+  			New Releases
+  		</div>
+		<div class="new-release-scroll-container swiper-container">
+			<div class="swiper-wrapper">
+			  <div class="swiper-slide" ng-repeat="song in trendingSongs" ng-click="playSong('{{song.id}}')">
+			  	<img src="{{song.imgname}}">
+			  	<p>{{song.name}}</p>
+			  </div>				
+			</div>
+		</div>
+	</div>
+	<div class="index-containers popular-container">
+  		<div class="container-header">
+  			Popular
+  		</div>
+		<div class="popular-scroll-container swiper-container">
+			<div class="swiper-wrapper">
+			  <div class="swiper-slide" ng-repeat="song in trendingSongs" ng-click="playSong('{{song.id}}')">
+			  	<img src="{{song.imgname}}">
+			  	<p>{{song.name}}</p>
+			  </div>				
+			</div>
+		</div>
+	</div>
+	<div class="popular-collections">
+		<div>
+			<img src="">
+			<p></p>
+		</div>	
+		<div>
+			<img src="">
+			<p></p>
+		</div>	
+		<div>
+			<img src="">
+			<p></p>
+		</div>	
+		<div>
+			<img src="">
+			<p></p>
+		</div>	
+	</div>
+  </ion-content>
+</ion-view>

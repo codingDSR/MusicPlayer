@@ -1,0 +1,9 @@
+<ion-view view-title="Songs">
+  <ion-content>
+  	<div class="list">
+  		<a ng-repeat="song in songs" class="item" href="#/app/song/{{song.name}}/{{song.filename}}/{{song.imgname}}/{{$index}}" menu-close>
+  			{{song.name}}
+  		</a>
+  	</div>
+  </ion-content>
+</ion-view>
